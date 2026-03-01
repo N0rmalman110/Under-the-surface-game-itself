@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://cdooi8bunfe3"]
+
+[ext_resource type="Script" uid="uid://dfmalm214bso8" path="res://game_scene.gd" id="1_fc3nu"]
+[ext_resource type="Texture2D" uid="uid://b3dnxyjop0lkc" path="res://cave base.jpg" id="1_xqiry"]
+[ext_resource type="Texture2D" uid="uid://d3van7hhfe78b" path="res://Fabric_PCEG_2022-1-scaled.jpg" id="2_pw8t4"]
+[ext_resource type="Texture2D" uid="uid://bdvjnxbsuiu8l" path="res://guy normal line.png" id="6_fc3nu"]
+[ext_resource type="Texture2D" uid="uid://qoypbt76tqb8" path="res://sitting 3.png" id="6_v6mqc"]
+[ext_resource type="Script" uid="uid://cjvjwsrcryiuf" path="res://fish_num.gd" id="7_bliph"]
+[ext_resource type="Texture2D" uid="uid://c7waufj5g53kk" path="res://guy special line.png" id="7_l7gmt"]
+[ext_resource type="Texture2D" uid="uid://dc12icxyqthhy" path="res://better fish.png" id="8_l7gmt"]
+
+[node name="GameScene" type="Node2D" unique_id=604809020]
+script = ExtResource("1_fc3nu")
+
+[node name="CaveBase" type="Sprite2D" parent="." unique_id=1475400175]
+position = Vector2(577, 331)
+scale = Vector2(0.5172682, 0.44792765)
+texture = ExtResource("1_xqiry")
+
+[node name="shop" type="Node" parent="." unique_id=1161396218]
+
+[node name="fisherman buy" type="Button" parent="shop" unique_id=964588031]
+visible = false
+top_level = true
+z_index = 2
+offset_left = 607.0
+offset_top = 229.0
+offset_right = 682.0
+offset_bottom = 309.0
+text = "120"
+
+[node name="manager buy" type="Button" parent="shop" unique_id=743467285]
+visible = false
+top_level = true
+z_index = 2
+offset_left = 609.0
+offset_top = 361.0
+offset_right = 684.0
+offset_bottom = 441.0
+text = "30"
+
+[node name="rebirth buy" type="Button" parent="shop" unique_id=1484503453]
+visible = false
+top_level = true
+z_index = 2
+offset_left = 609.0
+offset_top = 491.0
+offset_right = 684.0
+offset_bottom = 571.0
+text = "5000"
+
+[node name="watch ad" type="Button" parent="shop" unique_id=677884332]
+visible = false
+top_level = true
+z_index = 2
+offset_left = 609.0
+offset_top = 611.0
+offset_right = 684.0
+offset_bottom = 642.0
+text = "watch"
+
+[node name="close" type="Button" parent="shop" unique_id=1913565213]
+visible = false
+top_level = true
+z_index = 2
+offset_left = 639.0
+offset_top = 166.0
+offset_right = 687.0
+offset_bottom = 197.0
+text = "close"
+
+[node name="FabricPceg20221Scaled" type="Sprite2D" parent="shop" unique_id=25626067]
+visible = false
+z_index = 1
+position = Vector2(550, 407.53128)
+scale = Vector2(0.11171875, 0.19260256)
+texture = ExtResource("2_pw8t4")
+
+[node name="hirefishman" type="Label" parent="shop" unique_id=259925913]
+visible = false
+z_index = 2
+offset_left = 423.0
+offset_top = 229.0
+offset_right = 574.0
+offset_bottom = 253.0
+text = "HIRE A FISHERMAN"
+
+[node name="hiremanager" type="Label" parent="shop" unique_id=867896047]
+visible = false
+z_index = 2
+offset_left = 423.0
+offset_top = 361.0
+offset_right = 574.0
+offset_bottom = 385.0
+text = "HIRE A MANAGER"
+
+[node name="rebirth" type="Label" parent="shop" unique_id=1437764234]
+visible = false
+z_index = 2
+offset_left = 423.0
+offset_top = 491.0
+offset_right = 574.0
+offset_bottom = 515.0
+text = "REBIRTH"
+
+[node name="rebirthdesc" type="Label" parent="shop" unique_id=693685372]
+visible = false
+z_index = 2
+offset_left = 498.0
+offset_top = 515.0
+offset_right = 649.0
+offset_bottom = 590.0
+text = "Resets all 
+stats for a 
+1.25x boost"
+
+[node name="managerdesc" type="Label" parent="shop" unique_id=573630840]
+visible = false
+z_index = 2
+offset_left = 498.0
+offset_top = 385.0
+offset_right = 649.0
+offset_bottom = 460.0
+text = "They stop 
+fishermen 
+sleeping"
+
+[node name="fishman desc" type="Label" parent="shop" unique_id=661825360]
+visible = false
+z_index = 2
+offset_left = 498.0
+offset_top = 253.0
+offset_right = 572.0
+offset_bottom = 306.0
+text = "They fish 
+for fish "
+
+[node name="ad desc" type="Label" parent="shop" unique_id=632040239]
+visible = false
+z_index = 2
+offset_left = 423.0
+offset_top = 618.0
+offset_right = 574.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 14
+text = "Watch AD for 30s boost"
+
+[node name="FabricPceg20221Scaled" type="Sprite2D" parent="." unique_id=2017056609]
+position = Vector2(321.6619, 594)
+scale = Vector2(-0.070588626, -0.021554876)
+texture = ExtResource("2_pw8t4")
+
+[node name="fishnum" type="Label" parent="." unique_id=1721909587]
+offset_left = 337.0
+offset_top = 576.0
+offset_right = 356.0
+offset_bottom = 611.0
+theme_override_font_sizes/font_size = 25
+text = "0"
+script = ExtResource("7_bliph")
+
+[node name="Button2" type="Button" parent="." unique_id=1223066640]
+light_mask = 0
+z_index = 1
+offset_left = 424.0
+offset_top = 558.0
+offset_right = 615.0
+offset_bottom = 629.0
+theme_override_font_sizes/font_size = 40
+text = "fish"
+
+[node name="Sitting3" type="Sprite2D" parent="." unique_id=968774421]
+position = Vector2(897, 287)
+scale = Vector2(0.12838951, 0.12838954)
+texture = ExtResource("6_v6mqc")
+
+[node name="Sitting6" type="Sprite2D" parent="." unique_id=1659617249]
+position = Vector2(776.12494, 633)
+scale = Vector2(0.12838951, 0.12838954)
+texture = ExtResource("6_v6mqc")
+
+[node name="Sitting7" type="Sprite2D" parent="." unique_id=804530783]
+position = Vector2(278.00003, 573)
+scale = Vector2(-0.11161171, 0.12838954)
+texture = ExtResource("6_v6mqc")
+
+[node name="Sitting8" type="Sprite2D" parent="." unique_id=1721259395]
+position = Vector2(325, 286.00003)
+rotation = 0.09555481
+scale = Vector2(-0.11161171, 0.12838954)
+texture = ExtResource("6_v6mqc")
+
+[node name="fishnum2" type="Label" parent="." unique_id=1116887914]
+offset_left = 238.0
+offset_top = 574.0
+offset_right = 328.0
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 25
+text = "money:"
+script = ExtResource("7_bliph")
+
+[node name="G3" type="Sprite2D" parent="." unique_id=493148144]
+visible = false
+position = Vector2(812.00006, 127)
+scale = Vector2(0.16774459, 0.16419804)
+texture = ExtResource("6_fc3nu")
+
+[node name="G7" type="Sprite2D" parent="." unique_id=1989668096]
+visible = false
+position = Vector2(343, 418.99997)
+scale = Vector2(-0.17379458, 0.14767322)
+texture = ExtResource("7_l7gmt")
+
+[node name="BetterFish" type="Sprite2D" parent="." unique_id=879552396]
+position = Vector2(535, 577)
+scale = Vector2(0.23272656, 0.23272656)
+texture = ExtResource("8_l7gmt")
+
+[node name="Button" type="Button" parent="." unique_id=87203827]
+offset_left = 633.0
+offset_top = 582.0
+offset_right = 739.0
+offset_bottom = 624.0
+text = "expensive fish - 50"
+
+[connection signal="pressed" from="Button2" to="." method="_on_fish_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_auto_pressed"]

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://dp6ptikyu6krv"]
+
+[ext_resource type="Texture2D" uid="uid://b3dnxyjop0lkc" path="res://cave base.jpg" id="1_7mewq"]
+[ext_resource type="Texture2D" uid="uid://d3van7hhfe78b" path="res://Fabric_PCEG_2022-1-scaled.jpg" id="1_bajiw"]
+[ext_resource type="Script" uid="uid://bggdnjwk2sw4w" path="res://main_menu.gd" id="1_iv0vr"]
+[ext_resource type="Texture2D" uid="uid://dixs3fe2vfagv" path="res://title.png" id="3_qqwyt"]
+[ext_resource type="Texture2D" uid="uid://dc12icxyqthhy" path="res://better fish.png" id="4_iv0vr"]
+[ext_resource type="Texture2D" uid="uid://baijbpvh6ync3" path="res://sitting 1.png" id="6_n1emc"]
+[ext_resource type="Texture2D" uid="uid://dfktkuem1vqs3" path="res://sitting 2.png" id="7_gym6g"]
+[ext_resource type="Texture2D" uid="uid://qoypbt76tqb8" path="res://sitting 3.png" id="8_7bqju"]
+
+[node name="Node2D" type="Node2D" unique_id=1265894258]
+script = ExtResource("1_iv0vr")
+
+[node name="FabricPceg20221Scaled" type="Sprite2D" parent="." unique_id=469699298]
+position = Vector2(109, 239)
+scale = Vector2(0.20976563, 0.57070315)
+texture = ExtResource("1_bajiw")
+
+[node name="play" type="Button" parent="." unique_id=188579843]
+top_level = true
+offset_left = 62.0
+offset_top = 302.0
+offset_right = 312.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(0.20471728, 0.6947514, 0.7712672, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.75138897, 0.9824825, 0.92918813, 1)
+theme_override_font_sizes/font_size = 52
+text = "play"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="Button" parent="." unique_id=409420840]
+top_level = true
+offset_left = 62.0
+offset_top = 463.0
+offset_right = 312.0
+offset_bottom = 583.0
+theme_override_colors/font_color = Color(0.20471728, 0.6947514, 0.7712672, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.75138897, 0.9824825, 0.92918813, 1)
+theme_override_font_sizes/font_size = 45
+text = "exit"
+icon_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CaveBase" type="Sprite2D" parent="." unique_id=2070876950]
+position = Vector2(1495.0001, 74)
+scale = Vector2(1.0018979, 1.0542184)
+texture = ExtResource("1_7mewq")
+
+[node name="Title" type="Sprite2D" parent="." unique_id=1108569076]
+position = Vector2(184.00006, 116.999954)
+scale = Vector2(0.28902435, 0.3584337)
+texture = ExtResource("3_qqwyt")
+
+[node name="BetterFish" type="Sprite2D" parent="." unique_id=1910013484]
+position = Vector2(182.52199, 111.96876)
+scale = Vector2(0.23495606, 0.22811899)
+texture = ExtResource("4_iv0vr")
+
+[node name="Sitting1" type="Sprite2D" parent="." unique_id=63594509]
+position = Vector2(5777, 523)
+texture = ExtResource("6_n1emc")
+
+[node name="Sitting2" type="Sprite2D" parent="." unique_id=1706352808]
+position = Vector2(935, 407.99997)
+scale = Vector2(-0.17103995, 0.32202402)
+texture = ExtResource("7_gym6g")
+
+[node name="Sitting3" type="Sprite2D" parent="." unique_id=185835278]
+position = Vector2(5777, 523)
+texture = ExtResource("8_7bqju")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
